@@ -106,7 +106,7 @@ float3 SimplexNoise3DGrad(float3 v)
 	p3 *= norm.w;
 
 	// lerp final noise value
-	float4 m = max(0.6 - float4(dot(x0, x0), dot(x1, x1), dot(x2, x2), dot(x3, x3)), 0.0);
+	float4 m = max(0.5 - float4(dot(x0, x0), dot(x1, x1), dot(x2, x2), dot(x3, x3)), 0.0);
 	float4 m2 = m * m;
 	float4 m4 = m2 * m2;
 	float4 pdotx = float4(dot(p0, x0), dot(p1, x1), dot(p2, x2), dot(p3, x3));
@@ -115,7 +115,7 @@ float3 SimplexNoise3DGrad(float3 v)
 	float4 temp = m2 * m * pdotx;
 	float3 gradient = -8.0 * (temp.x * x0 + temp.y * x1 + temp.z * x2 + temp.w * x3);
 	gradient += m4.x * p0 + m4.y * p1 + m4.z * p2 + m4.w * p3;
-	gradient *= 42.0;
+	gradient *= 105.0;
 	return gradient;
 }
 
@@ -211,8 +211,7 @@ float4 SimplexNoise4DGrad(float4 v)
 	float2 temp1 = (m12 * m1) * float2( dot( p3, x3 ), dot( p4, x4 ) );
 	float4 grad = -8.0 * (temp0.x * x0 + temp0.y * x1 + temp0.z * x2 + temp1.x * x3 + temp1.y * x4);
 	grad += m04.x * p0 + m04.y * p1 + m04.z * p2 + m14.x * p3 + m14.y * p4;
-	grad *= 49;
-
+	grad *= 49.0;
 	return grad;
 }
 
