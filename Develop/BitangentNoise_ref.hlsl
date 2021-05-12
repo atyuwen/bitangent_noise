@@ -227,6 +227,18 @@ float3 BitangentNoise3D(float3 p)
 float3 BitangentNoise4D(float4 p)
 {
 	float3 dA = SimplexNoise4DGrad(p).xyz;
+	// 1. Correct but expensive.
+	//float3 dB = SimplexNoise4DGrad(p + float4(31.416, -47.853, 12.679, 113.408)).xyz;
+	// 2. Cheaper, less random but still looks nice.
 	float3 dB = SimplexNoise3DGrad(p.xyz + float3(31.416, -47.853, 12.679));
+	return cross(dA, dB);
+}
+
+// 4D Bitangent noise. Simple version with bad quality.
+// Approximately 222 instruction slots used.
+float3 BitangentNoise4DSimple(float4 p)
+{
+	float3 dA = SimplexNoise3DGrad(p.xyz);
+	float3 dB = SimplexNoise3DGrad(p.yzw);
 	return cross(dA, dB);
 }
