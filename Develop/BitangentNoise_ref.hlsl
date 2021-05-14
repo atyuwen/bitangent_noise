@@ -234,9 +234,9 @@ float3 BitangentNoise4D(float4 p)
 	return cross(dA, dB);
 }
 
-// 4D Bitangent noise. Simple version with bad quality.
+// 4D Bitangent noise. Fast version with bad quality.
 // Approximately 222 instruction slots used.
-float3 BitangentNoise4DSimple(float4 p)
+float3 BitangentNoise4DFast(float4 p)
 {
 	float3 dA = SimplexNoise3DGrad(p.xyz);
 	float3 dB = SimplexNoise3DGrad(p.yzw);
