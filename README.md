@@ -17,7 +17,7 @@ These performance data are measured on a Nvidia GTX 1060 card, where each noise 
 | snoise3d                 |   1530 μs   | [stegu's 3d simplex nosie](https://github.com/stegu/webgl-noise/blob/master/src/noise3D.glsl)                                       |
 | **SimplexNoise3D**       | **1153 μs** | [optimized 3d simplex noise](https://github.com/atyuwen/bitangent_noise/blob/main/Develop/SimplexNoise.hlsl#L41)                    |
 | snoise4d                 |   2578 μs   | [stegu's 4d simplex nosie](https://github.com/stegu/webgl-noise/blob/master/src/noise4D.glsl)                                       |
-| **SimplexNoise4D**       | **1798 μs** | [optimized 3d simplex noise](https://github.com/atyuwen/bitangent_noise/blob/main/Develop/SimplexNoise.hlsl#L84)                    |
+| **SimplexNoise4D**       | **1798 μs** | [optimized 4d simplex noise](https://github.com/atyuwen/bitangent_noise/blob/main/Develop/SimplexNoise.hlsl#L84)                    |
 | BitangentNoise3D_ref     |   2991 μs   | [3d bitangent noise, reference version ](https://github.com/atyuwen/bitangent_noise/blob/main/Develop/BitangentNoise_ref.hlsl#L219) |
 | **BitangentNoise3D**     | **1534 μs** | [optimized 3d bitangent noise](https://github.com/atyuwen/bitangent_noise/blob/main/BitangentNoise.hlsl#L41)                        |
 | BitangentNoise4D_ref     |   4365 μs   | [4d bitangent noise, reference version](https://github.com/atyuwen/bitangent_noise/blob/main/Develop/BitangentNoise_ref.hlsl#L227)  |
