@@ -6,7 +6,7 @@ Here is another divergence-free noise generator that is **faster** than curl noi
 
 Both HLSL and GLSL implementations are provided. Following image shows a particle system that are updated with bitangent noise.
 
-![image](https://github.com/atyuwen/bitangent_noise/raw/master/image.png)
+![image](image.png?raw=true)
 
 ## Performance
 
