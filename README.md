@@ -2,9 +2,9 @@
 
 [Curl Noise](https://www.cct.lsu.edu/~fharhad/ganbatte/siggraph2007/CD2/content/papers/046-bridson.pdf) by Robert Bridson is a widely known method that can generate divergence-free noise. This divergence-free property makes it extremely suitable for driving particles to move like real fluid motion.
 
-Here is another divergence-free noise generator that is **faster** than curl noise. I thought it was new and named it **Bitangent Noise**, but later I found it was already proposed by [Ivan DeWolf](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.7627&rep=rep1&type=pdf) in 2004. I'm wondering why it is so less popular comparing to curl noise.
+Here is another divergence-free noise generator that is **faster** than curl noise. I thought it was new and named it **Bitangent Noise**, but later I found it was already invented by [Ivan DeWolf](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.7627&rep=rep1&type=pdf) in 2006. (I'm wondering why it is so less popular comparing to curl noise.)
 
-Both HLSL and GLSL implementations are provided. Following image shows a particle system that are updated with bitangent noise.
+The implementation are carefully optimized, and both HLSL and GLSL codes are provided for your convenience. Following image shows a particle system that are updated with bitangent noise.
 
 ![image](image.png?raw=true)
 
