@@ -4,7 +4,7 @@
 
 Here is another divergence-free noise generator that is **computationally cheaper** than curl noise. I thought it was new and named it **Bitangent Noise**, but later I found it was already invented by [Ivan DeWolf](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.7627&rep=rep1&type=pdf) in 2006. (I'm wondering why it is so less popular comparing to curl noise.)
 
-The implementation are carefully optimized, and both HLSL and GLSL codes are provided for your convenience. Following image shows a particle system that are updated with bitangent noise.
+The implementation is carefully optimized, and both HLSL and GLSL codes are provided for your convenience. More details can be found [here](https://atyuwen.github.io/posts/bitangent-noise/). Following image shows a particle system that is updated using bitangent noise.
 
 ![image](image.png?raw=true)
 
