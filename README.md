@@ -8,6 +8,8 @@ The implementation is carefully optimized, and both HLSL and GLSL codes are prov
 
 ![image](image.png?raw=true)
 
+Here is a [shadertoy example](https://www.shadertoy.com/view/ftl3zN) shows how to use bitangent noise to make a smoke ball.
+
 ## Performance
 
 These performance data are measured on a Nvidia GTX 1060 card, where each noise function is executed 1280 * 720 * 10 times.
